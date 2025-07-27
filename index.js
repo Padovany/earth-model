@@ -10,7 +10,10 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(w, h);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
-document.body.appendChild(renderer.domElement);
+const canvas = document.body.appendChild(renderer.domElement);
+if(window.innerWidth <= 767) {
+    
+}
 
 // Setting up the camera
 const fov = 75;
@@ -18,7 +21,7 @@ const aspect = w / h;
 const near = 0.1;
 const far = 1000;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 5;
+camera.position.z = 3;
 
 // Setting up the scene
 const scene = new THREE.Scene();
@@ -33,7 +36,7 @@ class Earth {
         this.radius = radius;
         this.detail = detail;
         this.rotation = rotation;
-        this.animationRotationRate = 0.001;
+        this.animationRotationRate = 0 //0.001;
 
         this.loader = new THREE.TextureLoader();
         this.earthGeometry = new THREE.IcosahedronGeometry(this.radius, this.detail);
@@ -131,7 +134,7 @@ class Earth {
 }
 
 // Earth
-const earth = new Earth(1, 12, -23.4 * Math.PI / 180)
+const earth = new Earth(1, 12, 0)//-23.4 * Math.PI / 180)
 scene.add(earth.earthGroup)
 
 // Stars
