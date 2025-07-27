@@ -1,0 +1,64 @@
+body {
+    font-family: "Orbitron", sans-serif;
+}
+
+.orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.controls-overlay {
+    position: fixed;
+    z-index: 100;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    text-shadow: 0 0 1rem orangered;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.controls-item .control-btn:hover {
+    margin-left: 1rem;
+}
+
+.control-btn {
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #7c537c;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.control-btn:hover {
+    background-color: #4990ac;
+    color: #7c537c;
+}
+
+@media (max-width: 767px) {
+    .controls-overlay {
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .controls {
+        width: 90vw;
+    }
+}

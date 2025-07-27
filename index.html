@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Bobby Earth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+    <script type="importmap">
+		{
+			"imports": {
+				"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+                "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+            }
+		}
+		</script>
+</head>
+
+<body>
+    <div class="controls-overlay">
+        <h3 class="title">Earth Viewer</h3>
+        <div class="controls">
+            <div class="controls-item">
+                <button class="control-btn" id="texture-btn">Toggle Texture</button>
+            </div>
+            <div class="controls-item">
+                <button class="control-btn" id="lights-btn">Toggle Lights</button>
+            </div>
+            <div class="controls-item">
+                <button class="control-btn" id="clouds-btn">Toggle Clouds</button>
+            </div>
+            <div class="controls-item">
+                <button class="control-btn" id="glow-btn">Toggle Glow</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
